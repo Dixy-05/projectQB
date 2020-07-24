@@ -1,0 +1,124 @@
+body {
+  background-color: rgb(76, 78, 43);
+  color: white;
+  text-align: center;
+}
+/*User input section and box modification */
+#sec1 {
+  text-align: center;
+}
+#title {
+  font-size: 35px;
+}
+#mbudget {
+  margin-right: 3px;
+}
+#date {
+  margin-left: 7px;
+  margin-right: 2px;
+}
+#wbudget {
+  padding-left: 1px;
+}
+#selectCurrency {
+  margin-left: 208px;
+  margin-right: 6px;
+}
+#wcalcu {
+  margin-left: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  color: lightgray;
+  padding: px;
+}
+.currency {
+  margin-left: 5px;
+}
+.inputBox1 {
+  border-radius: 5px;
+  border-width: 0px;
+}
+#amount {
+  font-size: 15px;
+}
+#amount::placeholder {
+  color: lightgray;
+  font-weight: bold;
+  padding: 3px;
+}
+.roundBox {
+  background-color: rgb(146, 139, 39);
+  border-radius: 5px;
+  padding: 8px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+/* Shopping list section*/
+#slist {
+  font-size: 30px;
+  text-decoration: underline;
+  font-family: 'Brush Script MT';
+  margin-bottom: 0px;
+}
+#nlist {
+  margin-top: 0px;
+  border-radius: 3px;
+  border-width: 0px;
+  font-weight: bold;
+}
+#newItem {
+  margin-top: 10px;
+}
+#userInput {
+  border-radius: 4px;
+  border-width: 0px;
+  padding-right: 100px;
+  font-size: 16px;
+  margin-top: 3px;
+  padding-top: 2px;
+  padding-bottom: px;
+}
+#checkBox {
+  height: 20px;
+  width: 20px;
+}
+#noteInput {
+  border-radius: 5px;
+  border-width: 0px;
+}
+#note {
+  margin-bottom: 0px;
+  margin-right: 340px;
+}
+#pTotal {
+  font-size: 20px;
+}
+#purchasein {
+  border-radius: 5px;
+  border-width: 0px;
+  font-size: 16px;
+}
+#calculate {
+  font-size: 17px;
+  font-weight: 700;
+}
+#symbol2 {
+  font-size: 30px;
+  margin-left: 3px;
+}
+#weekText {
+  font-size: 25px;
+  font-family: 'Berlin Sans FB';
+}
+#weekBalance {
+  margin-left: 3px;
+}
+#monthText {
+  font-family: 'Berlin Sans FB';
+}
+#monthBalance {
+  margin-left: 3px;
+}
+#plsection {
+  margin-right: 400px;
+}

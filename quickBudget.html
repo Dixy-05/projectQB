@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lan="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="quickBudget.css" />
+    <title>Quick Budget</title>
+  </head>
+  <body>
+    <!--Maneging the User imput-->
+    <div id="box">
+      <section id="sec1">
+        <h1 id="title">Quick Budget</h1>
+        <p class="roundBox">
+          <span id="mbudget"> Month Budget:</span
+          ><input
+            class="inputBox1"
+            id="amount"
+            type="number"
+            placeholder="0.00"
+            maxlength="8"
+            required="required"
+          /><span class="currency">$</span> <span id="date">Date:</span
+          ><input
+            id="monthImput"
+            class="inputBox1"
+            type="month"
+            maxlength="12"
+          />
+        </p>
+        <div>
+          <p class="roundBox">
+            <span id="wbudget"
+              >Week Budget:
+              <span id="wcalcu">0.00</span>
+              <span id="currency1" class="currency">$</span>
+            </span>
+            <span id="selectCurrency"
+              >Select currency:
+              <select class="inputBox1">
+                <option value="$">$</option>
+                <option value="Lps.">Lps.</option>
+              </select>
+            </span>
+          </p>
+        </div>
+      </section>
+      <!--Maneging the shopping list-->
+      <section id="sec2">
+        <button id="nlist">New list</button>
+        <span id="symbol1">&#9998;</span>
+        <p id="slist">Shopping List</p>
+        <div id="newItem">
+          <input
+            id="userInput"
+            type="text"
+            placeholder="New item..."
+            maxlength="30"
+          />
+          <input id="checkBox" cols="2" type="checkbox" />
+        </div>
+
+        <div>
+          <p id="note">*Note:</p>
+          <textarea
+            id="noteInput"
+            rows="2"
+            cols="50"
+            type="text"
+            placeholder="Write note..."
+          ></textarea>
+        </div>
+      </section>
+    </div>
+    <!-- Purchase imput and Calculation -->
+    <section id="s3">
+      <div>
+        <p class="roundBox" id="pTotal">
+          Purchase total :
+          <input id="purchasein" type="number" placeholder="0.00" /><span
+            class="currency"
+            >$</span
+          >
+        </p>
+      </div>
+      <button id="calculate">Calculate Balance</button
+      ><span id="symbol2">&#9754;</span>
+      <p id="weekText">
+        Week Balance &#10148;<span id="weekBalance">0.00</span
+        ><span class="currency">$</span>
+      </p>
+      <p id="monthText">
+        Month Balance &#10148;<span id="monthBalance">0.00</span
+        ><span class="currency">$</span>
+      </p>
+    </section>
+    <!-- Purchase logs-->
+    <section id="s4">
+      <h4 id="plsection">Purchase Logs &#8690;</h4>
+      <p id="logs"></p>
+    </section>
+    <!--Creating new Budget-->
+    <section id="s5">
+      <button id="createNew">New Budget &#10010;</button>
+    </section>
+  </body>
+</html>
