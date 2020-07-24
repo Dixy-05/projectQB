@@ -3,6 +3,15 @@ body {
   color: white;
   text-align: center;
 }
+#box {
+  height: 570px;
+  width: 360px;
+  margin: 100px auto;
+  border-radius: 20px;
+  border-style: solid;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+}
 /*User input section and box modification */
 #sec1 {
   text-align: center;
