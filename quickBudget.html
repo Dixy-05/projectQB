@@ -10,6 +10,17 @@
     <div id="box">
       <section id="sec1">
         <h1 id="title">Quick Budget</h1>
+        <p id="date">
+          <span id="dateText">Date:</span
+          ><input id="dateImput" class="inputBox1" type="date" maxlength="7" />
+          <span id="selectCurrency"
+            >Select currency:
+            <select class="inputBox1">
+              <option value="$">$</option>
+              <option value="Lps.">Lps.</option>
+            </select>
+          </span>
+        </p>
         <p class="roundBox">
           <span id="mbudget"> Month Budget:</span
           ><input
@@ -19,13 +30,7 @@
             placeholder="0.00"
             maxlength="8"
             required="required"
-          /><span class="currency">$</span> <span id="date">Date:</span
-          ><input
-            id="monthImput"
-            class="inputBox1"
-            type="month"
-            maxlength="12"
-          />
+          /><span class="currency">$</span>
         </p>
         <div>
           <p class="roundBox">
@@ -33,13 +38,6 @@
               >Week Budget:
               <span id="wcalcu">0.00</span>
               <span id="currency1" class="currency">$</span>
-            </span>
-            <span id="selectCurrency"
-              >Select currency:
-              <select class="inputBox1">
-                <option value="$">$</option>
-                <option value="Lps.">Lps.</option>
-              </select>
             </span>
           </p>
         </div>
@@ -64,7 +62,7 @@
           <textarea
             id="noteInput"
             rows="2"
-            cols="50"
+            cols="40"
             type="text"
             placeholder="Write note..."
           ></textarea>
@@ -98,6 +96,8 @@
         <h4 id="plsection">Purchase Logs &#8690;</h4>
         <p id="logs"></p>
       </section>
+      <br />
+      <br />
       <!--Creating new Budget-->
       <section id="s5">
         <button id="createNew">New Budget &#10010;</button>
