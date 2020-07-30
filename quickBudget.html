@@ -9,13 +9,13 @@
     <!--Maneging the User imput-->
     <div id="box">
       <section id="sec1">
-        <h1 id="title">Quick Budget</h1>
+        <h1 id="title"><i style="color:greenyellow; font-size: 50px;">Q</i>uick <i style="color:greenyellow">B</i>udget</h1>
         <p id="date">
           <span id="dateText">Date:</span
           ><input id="dateImput" class="inputBox1" type="date" maxlength="7" />
           <span id="selectCurrency"
             >Select currency:
-            <select class="inputBox1">
+            <select id="currencyChoice" class="inputBox1">
               <option value="$">$</option>
               <option value="Lps.">Lps.</option>
             </select>
@@ -44,24 +44,25 @@
       </section>
       <!--Maneging the shopping list-->
       <section id="sec2">
-        <button id="nlist">New list</button>
+        <button id="nListButton" class='buttonHover'>New list</button>
         <span id="symbol1">&#9998;</span>
         <p id="slist">Shopping List</p>
-        <div id="newItem">
+        <div id="nItem">
           <input
             id="userInput"
             type="text"
             placeholder="New item..."
             maxlength="30"
           />
-          <input id="checkBox" cols="2" type="checkbox" />
+          <button id="enterButton" class='buttonHover'>Add</button>
+          <ul id="shoppingList"></ul>
         </div>
 
         <div>
           <p id="note">*Note:</p>
           <textarea
             id="noteInput"
-            rows="2"
+            rows="auto"
             cols="40"
             type="text"
             placeholder="Write note..."
@@ -73,16 +74,16 @@
       <section id="s3">
         <div>
           <p class="roundBox" id="pTotal">
-            Purchase total :
-            <input id="purchasein" type="number" placeholder="0.00" /><span
+            Purchase total:
+            <input id="purchasein" type="number" placeholder="0.00" /><span id="purchaseCurrency"
               class="currency"
               >$</span
             >
           </p>
         </div>
-        <button id="calculate">Calculate Balance</button
+        <button id="calculate" class='buttonHover'>Calculate Balance</button
         ><span id="symbol2">&#9754;</span>
-        <p id="weekText">
+        <p class= "roundBox"  id="weekText">
           Week Balance &#10148;<span id="weekBalance">0.00</span
           ><span class="currency">$</span>
         </p>
@@ -98,10 +99,16 @@
       </section>
       <br />
       <br />
+      <ul id="logs">
+      </ul>
       <!--Creating new Budget-->
       <section id="s5">
-        <button id="createNew">New Budget &#10010;</button>
+        <button id="createNew"class='buttonHover' >New Budget &#10010;</button>
+        
       </section>
-    </div>
+      
+    
+
+    <script type="text/javascript" src="quickBudget.js"></script>
   </body>
 </html>

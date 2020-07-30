@@ -1,16 +1,17 @@
 body {
-  background-color: rgb(76, 78, 43);
+  background-color: rgb(69, 73, 71);
   color: white;
   text-align: center;
 }
 #box {
-  height: 900px;
   width: 360px;
   margin: 100px auto;
   border-radius: 20px;
   border-style: solid;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
+  background-color: black;
+  padding-bottom: 15px;
 }
 /*User input section and box modification */
 #sec1 {
@@ -31,6 +32,8 @@ body {
 
 #wbudget {
   padding-left: 1px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
 }
 #selectCurrency {
   margin-right: 6px;
@@ -39,7 +42,7 @@ body {
   margin-left: 5px;
   font-weight: bold;
   font-size: 20px;
-  color: lightgray;
+  color: white;
 }
 .currency {
   margin-left: 5px;
@@ -50,29 +53,33 @@ body {
 }
 #amount {
   font-size: 15px;
+  text-align: center;
 }
 #amount::placeholder {
   color: lightgray;
   font-weight: bold;
   padding: 3px;
+  text-align: center;
 }
 .roundBox {
-  background-color: rgb(146, 139, 39);
+  background-color: rgb(59, 153, 22);
   border-radius: 10px;
   padding: 8px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 /* Shopping list section*/
-#slist {
-  font-size: 30px;
-  text-decoration: underline;
-  font-family: 'Brush Script MT';
-  margin-bottom: 0px;
-}
-#nlist {
+#nlistButton {
   margin-top: 0px;
   border-radius: 3px;
   border-width: 0px;
   font-weight: bold;
+}
+#slist {
+  font-size: 25px;
+  text-decoration: underline;
+  font-family: serif;
+  margin-bottom: 10px;
 }
 #newItem {
   margin-top: 10px;
@@ -80,15 +87,13 @@ body {
 #userInput {
   border-radius: 4px;
   border-width: 0px;
-  padding-right: 100px;
+  padding-right: 30px;
   font-size: 16px;
   margin-top: 3px;
-  padding-top: 2px;
+  padding-top: 5px;
+  text-align: center;
 }
-#checkBox {
-  height: 20px;
-  width: 20px;
-}
+
 #noteInput {
   border-radius: 5px;
   border-width: 0px;
@@ -96,15 +101,23 @@ body {
 #note {
   margin-bottom: 0px;
   margin-right: 255px;
+  height: auto;
 }
 #pTotal {
-  font-size: 20px;
+  font-size: 17px;
 }
 #purchasein {
+  text-align: center;
   border-radius: 5px;
   border-width: 0px;
   font-size: 16px;
+  margin-right: 0px;
+  width: 170px;
 }
+#purchasein::placeholder {
+  color: lightgray;
+}
+
 #calculate {
   font-size: 17px;
   font-weight: 700;
@@ -116,6 +129,8 @@ body {
 #weekText {
   font-size: 25px;
   font-family: 'Berlin Sans FB';
+  padding-top: 0px;
+  padding-bottom: 1px;
 }
 #weekBalance {
   margin-left: 3px;
@@ -128,4 +143,36 @@ body {
 }
 #plsection {
   margin-right: 230px;
+}
+/*new item box, check box, x box*/
+#item {
+  background-color: rgb(59, 153, 22);
+  border-radius: 5px;
+  margin-top: 7px;
+  list-style-type: none;
+  margin-right: 60px;
+  height: 20px;
+}
+#item > button {
+  float: left;
+  border: none;
+  background-color: transparent;
+}
+#checkBox {
+  height: 20px;
+  width: 20px;
+  float: right;
+  vertical-align: middle;
+  margin-top: 0px;
+}
+#logList {
+  list-style-type: none;
+}
+.buttonHover:hover {
+  background-color: rgb(145, 136, 11);
+  color: white;
+}
+.buttonHover {
+  border-radius: 3px;
+  border-width: 0px;
 }
