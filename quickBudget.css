@@ -52,8 +52,9 @@ body {
   border-width: 0px;
 }
 #amount {
-  font-size: 15px;
+  font-size: 18px;
   text-align: center;
+  width: 150px;
 }
 #amount::placeholder {
   color: lightgray;
@@ -93,6 +94,10 @@ body {
   padding-top: 5px;
   text-align: center;
 }
+#enterButton {
+  margin-bottom: 7px;
+  vertical-align: middle;
+}
 
 #noteInput {
   border-radius: 5px;
@@ -121,10 +126,14 @@ body {
 #calculate {
   font-size: 17px;
   font-weight: 700;
+  padding: 4px;
+  margin-top: 7px;
 }
 #symbol2 {
   font-size: 30px;
   margin-left: 3px;
+  margin-bottom: 3px;
+  vertical-align: middle;
 }
 #weekText {
   font-size: 25px;
@@ -151,8 +160,12 @@ body {
   margin-top: 7px;
   list-style-type: none;
   margin-right: 60px;
-  height: 20px;
+  height: 25px;
+  vertical-align: bottom;
+  padding-top: 7px;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
 #item > button {
   float: left;
   border: none;
@@ -162,9 +175,9 @@ body {
   height: 20px;
   width: 20px;
   float: right;
-  vertical-align: middle;
-  margin-top: 0px;
+  margin-top: -2px;
 }
+
 #logList {
   list-style-type: none;
 }

@@ -71,6 +71,7 @@ var monthBalance = 0;
 
 var monthInput = document.getElementById('amount');
 var weekBudget = document.getElementById('wcalcu');
+
 monthInput.addEventListener('change', weekBudgetfun);
 function weekBudgetfun() {
   weekBudget.innerHTML = monthInput.value / 4;
@@ -81,12 +82,16 @@ var calculateBalance = document.getElementById('calculate');
 calculateBalance.addEventListener('click', calculate);
 function calculate() {
   var purchaseInput = document.getElementById('purchasein');
+  if ((purchaseInput = '')) {
+    document.getElementById('logs').innerHTML = '';
+  } /*validar logs--------------------------------------------------------------*/
   monthBalance = monthBalance - purchaseInput.value;
   weekBalance = weekBalance - purchaseInput.value;
   document.getElementById('weekBalance').innerHTML = weekBalance;
   document.getElementById('monthBalance').innerHTML = monthBalance;
   var logList = document.createElement('li');
   logList.id = 'logList';
+  logList.className = 'classLogList';
   document.getElementById('logs').appendChild(logList);
   var currentDate = new Date();
   var formatedDate =
@@ -119,5 +124,6 @@ function createNewBudget() {
   document.getElementById('noteInput').value = '';
   document.getElementById('weekBalance').innerHTML = '0.00';
   document.getElementById('monthBalance').innerHTML = ' 0.00';
-  document.getElementById('logList').innerHTML = '';
+  var classLogList = document.getElementById('logs');
+  classLogList.innerHTML = '';
 }
