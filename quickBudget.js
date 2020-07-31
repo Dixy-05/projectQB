@@ -63,7 +63,7 @@ function createNewList() {
 var newListButton = document.getElementById('nListButton');
 newListButton.addEventListener('click', createNewNote);
 function createNewNote() {
-  document.getElementById('noteInput').value = '';
+  document.getElementById('noteInput') = '';
 }
 
 var weekBalance = 0;
@@ -82,7 +82,7 @@ var calculateBalance = document.getElementById('calculate');
 calculateBalance.addEventListener('click', calculate);
 function calculate() {
   var purchaseInput = document.getElementById('purchasein');
-  if ((purchaseInput = '')) {
+  if (purchaseInput.value == '') {
     document.getElementById('logs').innerHTML = '';
   } /*validar logs--------------------------------------------------------------*/
   monthBalance = monthBalance - purchaseInput.value;
