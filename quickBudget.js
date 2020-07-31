@@ -19,36 +19,44 @@ function enterStroke(keyEvent) {
     createItem();
   }
 }
-//Create item with "Enter" button
+//Creatin list with AddButton--------------------------------------------//
 var enterButton = document.getElementById('enterButton');
 enterButton.addEventListener('click', createItem);
-
+//Function  to create a list---------------------------------//
 function createItem() {
+  //Validate Add button----------------------------------//
   if (userInput.value == '') {
     return null;
   }
-
+  //Create new item--------------------------------------//
   var item = document.createElement('li');
   item.id = 'item';
-  item.className = 'itemClass';
+
   item.innerHTML = userInput.value;
+  document.getElementById('shoppingList').appendChild(item);
+  //Create button and text node----------------------//
   var xbutton = document.createElement('button');
   xbutton.id = 'nodeButton';
   item.appendChild(xbutton);
+
   var textNode = document.createTextNode('X');
   textNode.id = 'textNode';
   xbutton.appendChild(textNode);
-  document.getElementById('shoppingList').appendChild(item);
-  var checkBox = document.createElement('input');
-  checkBox.id = 'checkBox';
-  checkBox.type = 'checkbox';
-  item.appendChild(checkBox);
   xbutton.addEventListener('click', deleteItem);
   function deleteItem() {
     document.getElementById('shoppingList').removeChild(item);
   }
+  //Create CheckBox-----------------------------//
+  var checkBox = document.createElement('input');
+  checkBox.id = 'checkBox';
+  checkBox.type = 'checkbox';
+
+  item.appendChild(checkBox);
+  // Reset unser input----------------------------//
   userInput.value = '';
 }
+// Adding event to  "Reset list" button-------------------------------------//
+//Reset list----------------------------------------------------//
 var newListButton = document.getElementById('nListButton');
 newListButton.addEventListener('click', createNewList);
 function createNewList() {
@@ -60,12 +68,13 @@ function createNewList() {
     document.getElementById('shoppingList').removeChild(item);
   }*/
 }
-var newListButton = document.getElementById('nListButton');
-newListButton.addEventListener('click', createNewNote);
-function createNewNote() {
-  document.getElementById('noteInput') = '';
+//Add event to item Checkbox-----------------------------//
+var getCheckBox = document.getElementById('checkBox');
+getCheckBox.addEventListener('click', crossOut);
+function crossOut() {
+  getCheckBox.clossest('li').className = 'crossThrough';
 }
-
+// Calculatin Balance-------------------------------------------------------------//
 var weekBalance = 0;
 var monthBalance = 0;
 
@@ -81,10 +90,9 @@ function weekBudgetfun() {
 var calculateBalance = document.getElementById('calculate');
 calculateBalance.addEventListener('click', calculate);
 function calculate() {
+  //Validating Logs-------------------------------//
   var purchaseInput = document.getElementById('purchasein');
-  if (purchaseInput.value == '') {
-    document.getElementById('logs').innerHTML = '';
-  } /*validar logs--------------------------------------------------------------*/
+
   monthBalance = monthBalance - purchaseInput.value;
   weekBalance = weekBalance - purchaseInput.value;
   document.getElementById('weekBalance').innerHTML = weekBalance;
@@ -93,6 +101,10 @@ function calculate() {
   logList.id = 'logList';
   logList.className = 'classLogList';
   document.getElementById('logs').appendChild(logList);
+  if (purchaseInput.value == '') {
+    return;
+  }
+
   var currentDate = new Date();
   var formatedDate =
     currentDate.getFullYear() +

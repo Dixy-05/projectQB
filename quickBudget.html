@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lan="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="quickBudget.css" />
+    <title>Quick Budget</title>
+  </head>
+  <body>
+    <!--Maneging the User imput-->
+    <div id="box">
+      <section id="sec1">
+        <h1 id="title"><i style="color:greenyellow; font-size: 50px;">Q</i>uick <i style="color:greenyellow">B</i>udget</h1>
+        <p id="date">
+          <span id="dateText">Date:</span
+          ><input id="dateImput" class="inputBox1" type="date" maxlength="7" />
+          <span id="selectCurrency"
+            >Select currency:
+            <select id="currencyChoice" class="inputBox1">
+              <option value="$">$</option>
+              <option value="Lps.">Lps.</option>
+            </select>
+          </span>
+        </p>
+        <p class="roundBox">
+          <span id="mbudget"> Month Budget:</span
+          ><input
+            class="inputBox1"
+            id="amount"
+            type="number"
+            placeholder="0.00"
+            step="0.01"
+            title="currency"
+            maxlength="8"
+            required="required"
+          /><span class="currency">$</span>
+        </p>
+        <div>
+          <p class="roundBox">
+            <span id="wbudget"
+              >Week Budget:
+              <span id="wcalcu">0.00</span>
+              <span id="currency1" class="currency">$</span>
+            </span>
+          </p>
+        </div>
+      </section>
+      <!--Maneging the shopping list-->
+      <section id="sec2">
+        <button id="nListButton" class='buttonHover'>Reset list</button>
+        <span id="symbol1">&#x270E;</span>
+        <p id="slist">Shopping List</p>
+        <div id="nItem">
+          <input
+            id="userInput"
+            type="text"
+            placeholder="New item..."
+            maxlength="30"
+          />
+          <button id="enterButton" class='buttonHover'>Add</button>
+          <ul id="shoppingList"></ul>
+        </div>
+
+        <div>
+          <p id="note">*Note:</p>
+          <textarea
+            id="noteInput"
+            rows="auto"
+            cols="40"
+            type="text"
+            placeholder="Write note..."
+          ></textarea>
+        </div>
+      </section>
+
+      <!-- Purchase imput and Calculation -->
+      <section id="s3">
+        <div>
+          <p class="roundBox" id="pTotal">
+            Purchase total:
+            <input id="purchasein" type="number" placeholder="0.00" /><span id="purchaseCurrency"
+              class="currency"
+              >$</span
+            >
+          </p>
+        </div>
+        <button id="calculate" class='buttonHover'>Calculate Balance</button
+        ><span id="symbol2">&#10697;</span>
+        <p class= "roundBox"  id="weekText">
+          Week Balance &#10148;<span id="weekBalance">0.00</span
+          ><span class="currency">$</span>
+        </p>
+        <p id="monthText">
+          Month Balance &#10148;<span id="monthBalance">0.00</span
+          ><span class="currency">$</span>
+        </p>
+      </section>
+      <!-- Purchase logs-->
+      <section id="s4">
+        <h4 id="plsection">Purchase Logs &#8690;</h4>
+        <p id="logs"></p>
+      </section>
+      <br />
+      <br />
+      <ul id="logs">
+      </ul>
+      <!--Creating new Budget-->
+      <section id="s5">
+        <button id="createNew"class='buttonHover' >Reset Budget &#10010;</button>
+        
+      </section>
+      
+    
+
+    <script type="text/javascript" src="quickBudget.js"></script>
+  </body>
+</html>
