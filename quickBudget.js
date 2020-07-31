@@ -31,14 +31,12 @@ function createItem() {
   //Create new item--------------------------------------//
   var item = document.createElement('li');
   item.id = 'item';
-
-  item.innerHTML = userInput.value;
+  item.className = item.innerHTML = userInput.value;
   document.getElementById('shoppingList').appendChild(item);
-  //Create button and text node----------------------//
+  //Create button for text node----------------------//
   var xbutton = document.createElement('button');
   xbutton.id = 'nodeButton';
   item.appendChild(xbutton);
-
   var textNode = document.createTextNode('X');
   textNode.id = 'textNode';
   xbutton.appendChild(textNode);
@@ -50,9 +48,8 @@ function createItem() {
   var checkBox = document.createElement('input');
   checkBox.id = 'checkBox';
   checkBox.type = 'checkbox';
-
   item.appendChild(checkBox);
-  // Reset unser input----------------------------//
+  // Reset user input----------------------------//
   userInput.value = '';
 }
 // Adding event to  "Reset list" button-------------------------------------//
@@ -69,12 +66,8 @@ function createNewList() {
   }*/
 }
 //Add event to item Checkbox-----------------------------//
-var getCheckBox = document.getElementById('checkBox');
-getCheckBox.addEventListener('click', crossOut);
-function crossOut() {
-  getCheckBox.clossest('li').className = 'crossThrough';
-}
-// Calculatin Balance-------------------------------------------------------------//
+
+// Calculating Balance-------------------------------------------------------------//
 var weekBalance = 0;
 var monthBalance = 0;
 
@@ -92,7 +85,6 @@ calculateBalance.addEventListener('click', calculate);
 function calculate() {
   //Validating Logs-------------------------------//
   var purchaseInput = document.getElementById('purchasein');
-
   monthBalance = monthBalance - purchaseInput.value;
   weekBalance = weekBalance - purchaseInput.value;
   document.getElementById('weekBalance').innerHTML = weekBalance;
