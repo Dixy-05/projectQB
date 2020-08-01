@@ -53,7 +53,6 @@ function createItem() {
   userInput.value = '';
 }
 // Adding event to  "Reset list" button-------------------------------------//
-//Reset list----------------------------------------------------//
 var newListButton = document.getElementById('nListButton');
 newListButton.addEventListener('click', createNewList);
 function createNewList() {
@@ -67,32 +66,35 @@ function createNewList() {
 }
 //Add event to item Checkbox-----------------------------//
 
-// Calculating Balance-------------------------------------------------------------//
+//container fase 1
 var weekBalance = 0;
 var monthBalance = 0;
 
 var monthInput = document.getElementById('amount');
 var weekBudget = document.getElementById('wcalcu');
-
+//container fase 2
 monthInput.addEventListener('change', weekBudgetfun);
 function weekBudgetfun() {
   weekBudget.innerHTML = monthInput.value / 4;
   monthBalance = monthInput.value;
   weekBalance = monthBalance / 4;
 }
+//Container fase 3
+//Calculating Balance-----------------------------------------//
 var calculateBalance = document.getElementById('calculate');
 calculateBalance.addEventListener('click', calculate);
 function calculate() {
-  //Validating Logs-------------------------------//
   var purchaseInput = document.getElementById('purchasein');
   monthBalance = monthBalance - purchaseInput.value;
   weekBalance = weekBalance - purchaseInput.value;
   document.getElementById('weekBalance').innerHTML = weekBalance;
   document.getElementById('monthBalance').innerHTML = monthBalance;
+  // Creating purchase logs------------------------------------------//
   var logList = document.createElement('li');
   logList.id = 'logList';
   logList.className = 'classLogList';
   document.getElementById('logs').appendChild(logList);
+  //Validating Logs-------------------------------//
   if (purchaseInput.value == '') {
     return;
   }
@@ -117,6 +119,7 @@ function calculate() {
     purchaseInput.value + '  ' + currency + ' &#x2794; ' + ' ' + formatedDate;
   purchaseInput.value = '';
 }
+//Reseting the budget-----------------------------------------------------//
 var newBudget = document.getElementById('createNew');
 newBudget.addEventListener('click', createNewBudget);
 function createNewBudget() {

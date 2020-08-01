@@ -23,23 +23,22 @@ body {
   padding-bottom: 14px;
   margin-top: 8px;
 }
-#mbudget {
-  margin-right: 3px;
-}
 #dateText {
   margin-right: 230px;
 }
 #dateImput {
   margin-right: 40px;
 }
-
+#selectCurrency {
+  margin-right: 6px;
+}
+#mbudget {
+  margin-right: 3px;
+}
 #wbudget {
   padding-left: 1px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20px;
-}
-#selectCurrency {
-  margin-right: 6px;
 }
 #wcalcu {
   margin-left: 5px;
@@ -50,14 +49,12 @@ body {
 .currency {
   margin-left: 5px;
 }
-.inputBox1 {
-  border-radius: 5px;
-  border-width: 0px;
-}
 #amount {
   font-size: 18px;
   text-align: center;
   width: 150px;
+  border-radius: 5px;
+  border-width: 0px;
 }
 #amount::placeholder {
   color: lightgray;
@@ -101,7 +98,6 @@ body {
   margin-bottom: 7px;
   vertical-align: middle;
 }
-
 #noteInput {
   border-radius: 5px;
   border-width: 0px;
@@ -156,6 +152,12 @@ body {
 #plsection {
   margin-right: 230px;
 }
+.crossThrough {
+  text-decoration: line-through;
+}
+#logList {
+  list-style-type: none;
+}
 /*new item box, check box, x box*/
 
 #item {
@@ -169,7 +171,6 @@ body {
   padding-top: 7px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 #item > button {
   float: left;
   border: none;
@@ -181,12 +182,7 @@ body {
   float: right;
   margin-top: -2px;
 }
-.crossThrough {
-  text-decoration: line-through;
-}
-#logList {
-  list-style-type: none;
-}
+/* Styling the buttons*/
 .buttonHover:hover {
   background-color: rgb(238, 229, 99);
   color: grey;
