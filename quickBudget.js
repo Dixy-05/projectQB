@@ -10,8 +10,7 @@ function theCurrency() {
     }
   }
 }
-//create item with  enter key code
-
+//create item with  enter key code------------------------------//
 var userInput = document.getElementById('userInput');
 userInput.addEventListener('keypress', enterStroke);
 function enterStroke(keyEvent) {
@@ -47,11 +46,31 @@ function createItem() {
   //Create CheckBox-----------------------------//
   var checkBox = document.createElement('input');
   checkBox.id = 'checkBox';
+  checkBox.className = 'checkBoxClass';
+  checkBox.name = 'checkBoxName';
   checkBox.type = 'checkbox';
   item.appendChild(checkBox);
+  //Add event to item Checkbox-----------------------------//
+  var theCheckBox = document.getElementsByClassName('checkBoxClass');
+  function crossThrough() {
+    for (i = 0; i < theCheckBox.length; i++) {
+      theCheckBox[i].addEventListener('change', crossout);
+      function crossout() {
+        if (this.checked) {
+          this.closest('li').style.textDecoration = 'line-through';
+          this.closest('li').style.backgroundColor = 'gray';
+        } else {
+          this.closest('li').style.textDecoration = 'none';
+          this.closest('li').style.backgroundColor = 'rgb(106, 158, 29)';
+        }
+      }
+    }
+  }
+  crossThrough();
   // Reset user input----------------------------//
   userInput.value = '';
 }
+
 // Adding event to  "Reset list" button-------------------------------------//
 var newListButton = document.getElementById('nListButton');
 newListButton.addEventListener('click', createNewList);
@@ -64,7 +83,6 @@ function createNewList() {
     document.getElementById('shoppingList').removeChild(item);
   }*/
 }
-//Add event to item Checkbox-----------------------------//
 
 //container fase 1
 var weekBalance = 0;
