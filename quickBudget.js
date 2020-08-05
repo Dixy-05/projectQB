@@ -128,8 +128,12 @@ function weekBudgetfun() {
 //Calculating Balance-----------------------------------------//
 var calculateBalance = document.getElementById('calculate');
 calculateBalance.addEventListener('click', calculate);
+var purchaseInput = document.getElementById('purchasein');
 function calculate() {
-  var purchaseInput = document.getElementById('purchasein');
+  if (purchaseInput.value == '') {
+    return;
+  }
+
   monthBalance = monthBalance - purchaseInput.value;
   weekBalance = weekBalance - purchaseInput.value;
   document.getElementById('weekBalance').innerHTML = weekBalance;
